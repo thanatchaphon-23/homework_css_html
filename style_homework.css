@@ -1,0 +1,185 @@
+body {
+    background-image: url('coolkid.jpeg');
+    background-size: 1000px;
+}
+header {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.head-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 10px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* โลโก้ */
+.logo {
+    background-color: #f3f3f3;
+    border-radius: 50%;
+    width: 55px;
+    /* กำหนดความกว้าง */
+    height: 55px;
+    /* กำหนดความสูงให้เท่ากับความกว้างเพื่อให้เป็นวงกลม */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+    /* เพิ่มการเปลี่ยนแปลงแบบ smooth */
+    cursor: grab;
+}
+.logo:hover {
+    background-color: #5d95de;
+    /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+    transform: scale(1.3);
+    /* ขยายขนาดโลโก้เล็กน้อยเมื่อ hover */
+}
+/* กำหนด Flexbox ให้กับเมนูนำทาง */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+/* ลิงก์ในเมนูนำทาง */
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    cursor: no-drop;
+}
+/* ทำให้ลิงก์แรก (Home) มีพื้นหลังพิเศษ */
+nav a:first-child {
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* เพิ่มเอฟเฟกต์เมื่อ hover */
+nav a:hover {
+    background-color: #e3e5ea;
+    border-radius: 50px;
+}
+/* Flexbox สำหรับเมนูทางขวา */
+.right-menu {
+    display: flex;
+    align-items: center;
+}
+/* ลิงก์ในเมนูทางขวา */
+.right-menu a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    cursor: grab;
+}
+/* เส้นคั่นในเมนูทางขวา */
+.divider {
+    height: 20px;
+    width: 1px;
+    background-color: gray;
+    margin-left: 15px;
+}
+.center-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 10px 30px;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 70px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+.picture {
+    display: flex;
+    width: 250px;
+    /* กำหนดความกว้างของรูปภาพ */
+    height: 100px;
+    /* กำหนดความสูงของรูปภาพ */
+    border-radius: 50px;
+    /* ทำให้รูปภาพเป็นทรงกลม */
+    object-fit: cover;
+    /* ปรับขนาดรูปภาพให้เต็มรูปแบบทรงกลม */
+    vertical-align: middle;
+}
+.container {
+    padding: 10px;
+    display: flex; /* ใช้ Flexbox เพื่อจัดวางองค์ประกอบในแนวนอน */
+    justify-content: space-between; /* จัดวางปุ่มซ้าย-ขวาให้เต็มพื้นที่ */
+    align-items: center;
+}
+.menu {
+    display: flex;
+    align-items: center;
+}
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+.button {
+    background-color: #333;
+    color: white;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.menu-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.image-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; /* ระยะห่างระหว่างแถวของรูปภาพ */
+    padding: 20px; /* ระยะห่างระหว่างรูปภาพและขอบคอนเทนเนอร์ */
+}
+.image-container img {
+    width: 300px;
+    height: 450px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.image-container img:hover {
+    transform: scale(1.1);
+    /* ซูมรูปภาพเมื่อชี้ */
+}
+.img-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 10px 30px;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
