@@ -32,7 +32,7 @@ header {
     font-size: 25px;
     transition: background-color 0.3s, transform 0.3s;
     /* เพิ่มการเปลี่ยนแปลงแบบ smooth */
-    cursor: grab;
+    cursor: pointer;
 }
 .logo:hover {
     background-color: #5d95de;
@@ -78,10 +78,9 @@ nav a:hover {
 /* ลิงก์ในเมนูทางขวา */
 .right-menu a {
     margin-left: 15px;
-    text-decoration: none;
     color: black;
     font-size: 18px;
-    cursor: grab;
+    cursor: pointer;
 }
 /* เส้นคั่นในเมนูทางขวา */
 .divider {
@@ -125,10 +124,6 @@ nav a:hover {
     justify-content: space-between; /* จัดวางปุ่มซ้าย-ขวาให้เต็มพื้นที่ */
     align-items: center;
 }
-.menu {
-    display: flex;
-    align-items: center;
-}
 .buttons {
     display: flex;
     gap: 10px;
@@ -143,6 +138,7 @@ nav a:hover {
     border-radius: 20px;
     cursor: pointer;
 }
+
 .menu-button {
     background-color: #333;
     color: white;
@@ -155,6 +151,13 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+.menu-button:hover {
+    background-color: #5d95de;
+    /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+    transform: scale(1.3);
+    /* ขยายขนาดโลโก้เล็กน้อยเมื่อ hover */
+    transition: transform 0.3s ease;
 }
 .image-container {
     display: flex;
